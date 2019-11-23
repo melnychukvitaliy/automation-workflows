@@ -4,16 +4,16 @@
 
 if you need more context how to configure and use Github workflows you can look at [automating your workflow with actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow)
 
-## Google auth
+## Google Cloud auth
 
-Google auth is required for all deployment.
+Google Cloud auth is required for all deployments.
 
 Requirements:
 
 - Google Cloud Platform project
 - GCP Service Account with write access to GCR and GKE for this project
-- GCP Service Account credentials stored as a JSON key. Base64 encode the JSON key and paste the entire blob as a secret (Repository Settings --> Secrets) named GKE_KEY.
-- Also add Secrets for GKE_PROJECT and GKE_EMAIL. Those can be found in the raw key JSON above.
+- GCP Service Account credentials stored as a JSON key. Base64 encode the JSON key and paste the entire blob as a secret (Repository Settings --> Secrets) named `GKE_KEY`.
+- Also add Secrets for `GKE_PROJECT` and `GKE_EMAIL`. Those can be found in the raw key JSON above.
 
 ## Build and push service to Google registry
 
